@@ -18,55 +18,81 @@ Công cụ giúp **kết nối website [Seprinder.com](https://seprinder.com)** 
 
 ## Cài đặt nhanh
 
-1️⃣ **Đăng nhập vào máy in bằng PuTTY**
+1️. **Đăng nhập vào máy in bằng PuTTY**
 
-Mở **PuTTY**, nhập địa chỉ IP của máy in (ví dụ `192.168.1.x`), rồi nhấn **Open**.  
-Tại cửa sổ terminal:
-login as: pi
-password: raspberry
-
-yaml
-Sao chép mã
+Mở **PuTTY**, nhập địa chỉ IP của máy in (ví dụ `192.168.1.x`), nhấn **Open**. Đăng nhập với tài khoản của bạn (ví dụ `pi`):
 
 ---
 
-2️⃣ **Kiểm tra kiến trúc CPU của máy in**
+2️. **Kiểm tra kiến trúc CPU của máy in**
 
 Dán lệnh sau vào PuTTY:
+
 ```bash
 uname -m
+```
+
 Kết quả sẽ hiển thị một trong hai loại:
 
-aarch64 → chọn bản spdbridge-aarch64-prod
+* `aarch64`  → chọn bản **spdbridge-aarch64-prod**
+* `armv7l`   → chọn bản **spdbridge-armv7l-prod**
 
-armv7l → chọn bản spdbridge-armv7l-prod
+---
 
-3️⃣ Cài đặt Bridge tương ứng
+3️. **Tải Bridge đúng phiên bản**
 
-Nếu kết quả là aarch64:
+**Nếu kết quả là aarch64:**
 
-bash
-Sao chép mã
+```bash
 wget https://raw.githubusercontent.com/seprinder/Seprinder_Bridge/master/production/spdbridge-aarch64-prod -O bridge
 chmod +x bridge
-sudo apt update && sudo apt install tmux -y
-tmux new -s bridge ./bridge
-Nếu kết quả là armv7l:
+```
 
-bash
-Sao chép mã
+**Nếu kết quả là armv7l:**
+
+```bash
 wget https://raw.githubusercontent.com/seprinder/Seprinder_Bridge/master/production/spdbridge-armv7l-prod -O bridge
 chmod +x bridge
-sudo apt update && sudo apt install tmux -y
-tmux new -s bridge ./bridge
-4️⃣ Truy cập giao diện điều khiển
+```
+
+4️. **Cài đặt tmux (nếu chưa có)**
+
+```bash
+sudo apt update
+sudo apt install tmux -y
+```
+
+---
+
+5️. **Chạy Bridge trong tmux (chạy lại mỗi lần bạn khởi động máy chủ chạy klipper)**
+
+```bash
+tmux new -s bridge
+./bridge
+```
+
+* Thoát tmux (Bridge vẫn chạy): **Ctrl + B**, sau đó **D**
+* Quay lại phiên: `tmux attach -t bridge`
+
+---
+
+6️. **Truy cập giao diện điều khiển**
 
 Mở trình duyệt và nhập địa chỉ:
 
-cpp
-Sao chép mã
+```text
 http://<ip_may_in>:1122
+```
+
 → Đăng nhập để cho phép website Seprinder gửi file G-code trực tiếp đến máy in Klipper.
 
-Lưu ý
-Khi đóng PuTTY, Bridge vẫn chạy vì được giữ trong tmux.
+---
+
+## Lưu ý
+
+* Khi đóng PuTTY, Bridge vẫn chạy vì được giữ trong **tmux**.
+* Nếu không truy cập được port 1122, kiểm tra tường lửa:
+
+```bash
+sudo ufw allow 1122
+```
