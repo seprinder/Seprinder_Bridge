@@ -81,14 +81,16 @@ Mở trình duyệt và nhập địa chỉ:
 
 ```text
 http://<ip_may_in>:1122
-<p align="center"> <img src="image/huong_dan_dang_nhap.png" alt="Hướng dẫn đăng nhập Bridge (port 1122)" width="800"> </p>
+```
+
 → Đăng nhập để cho phép website Seprinder gửi file G-code trực tiếp đến máy in Klipper.
+
+<p align="center">
+  <img src="image/huong_dan_dang_nhap.png" alt="Hướng dẫn đăng nhập Bridge (port 1122)" width="800">
+</p>
+
+---
 
 ## Lưu ý
 
 * Khi đóng PuTTY, Bridge vẫn chạy vì được giữ trong **tmux**.
-* Nếu không truy cập được port 1122, kiểm tra tường lửa:
-
-```bash
-sudo ufw allow 1122
-```
