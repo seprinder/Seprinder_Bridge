@@ -67,8 +67,7 @@ sudo apt install tmux -y
 5️. **Chạy Bridge trong tmux (chạy lại mỗi lần bạn khởi động máy chủ chạy klipper)**
 
 ```bash
-tmux new -s bridge
-./bridge
+tmux new -s bridge "$HOME/bridge"
 ```
 
 * Thoát tmux (Bridge vẫn chạy): **Ctrl + B**, sau đó **D**
