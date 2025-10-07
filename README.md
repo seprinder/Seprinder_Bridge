@@ -16,7 +16,7 @@ Công cụ giúp **kết nối website [Seprinder.com](https://seprinder.com)** 
 
 ---
 
-## Cài đặt nhanh
+## Cài đặt
 
 1️. **Đăng nhập vào máy in bằng PuTTY**
 
