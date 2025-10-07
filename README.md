@@ -86,7 +86,7 @@ http://<ip_may_in>:1122
 → Đăng nhập để cho phép website Seprinder gửi file G-code trực tiếp đến máy in Klipper.
 
 <p align="center">
-  <img src="image/huong_dan_dang_nhap.png" alt="Hướng dẫn đăng nhập Bridge (port 1122)" width="800">
+  <img src="https://raw.githubusercontent.com/seprinder/Seprinder_Bridge/master/Image/huong_dan_dang_nhap.png" alt="Hướng dẫn đăng nhập Bridge (port 1122)" width="800">
 </p>
 
 ---
