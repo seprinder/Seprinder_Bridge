@@ -44,14 +44,14 @@ Kết quả sẽ hiển thị một trong hai loại:
 **Nếu kết quả là aarch64:**
 
 ```bash
-wget https://raw.githubusercontent.com/seprinder/Seprinder_Bridge/blob/master/production/spdbridge-aarch64-prod -O bridge
+wget https://raw.githubusercontent.com/seprinder/Seprinder_Bridge/master/production/spdbridge-aarch64-prod -O bridge
 chmod +x bridge
 ```
 
 **Nếu kết quả là armv7l:**
 
 ```bash
-wget https://raw.githubusercontent.com/seprinder/Seprinder_Bridge/blob/master/production/spdbridge-armv7l-prod -O bridge
+wget https://raw.githubusercontent.com/seprinder/Seprinder_Bridge/master/production/spdbridge-aarch64-prod -O bridge
 chmod +x bridge
 ```
 
