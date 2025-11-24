@@ -51,7 +51,7 @@ chmod +x bridge
 **Nếu kết quả là armv7l:**
 
 ```bash
-wget https://raw.githubusercontent.com/seprinder/Seprinder_Bridge/master/production/spdbridge-armv7l-prod -O bridge
+wget https://raw.githubusercontent.com/seprinder/Seprinder_Bridge/master/production/spdbridge-aarch64-prod -O bridge
 chmod +x bridge
 ```
 
