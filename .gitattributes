@@ -1,3 +1,1 @@
 production/spdbridge-win64.zip filter=lfs diff=lfs merge=lfs -text
-production_update/spdbridge-win64.zip filter=lfs diff=lfs merge=lfs -text
-production_a/spdbridge-win64.zip filter=lfs diff=lfs merge=lfs -text
