@@ -1,1 +1,4 @@
 production/spdbridge-win64.zip filter=lfs diff=lfs merge=lfs -text
+production/spdbridge-aarch64 filter=lfs diff=lfs merge=lfs -text
+production/spdbridge-armv7l filter=lfs diff=lfs merge=lfs -text
+production/spdbridge-win64.exe filter=lfs diff=lfs merge=lfs -text
